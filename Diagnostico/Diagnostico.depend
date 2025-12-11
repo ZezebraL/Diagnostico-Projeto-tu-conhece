@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1765493796 source:d:\salve_aqui_seus_arquivos\pedrol\diagnostico\main.c
+	<stdio.h>
+	<ctype.h>
+	<locale.h>
+
