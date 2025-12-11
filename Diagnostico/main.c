@@ -7,62 +7,63 @@ int main() {
     char resposta;
     setlocale(LC_ALL, "");//pra colocar acento e cedilha, nao sei porque meu til nao ta funcionando
 
-    printf("=== DIAGN”STICO DE VAZAMENTOS ===\n");
-    printf("Para comeÁar, qual o tipo de sinal vocÍ percebeu?\n\n");
-    printf("1 - Vazamento VISÕVEL (¡gua jorrando, pingando, cano estourado)\n");
-    printf("2 - Vazamento OCULTO (Conta alta, parede ˙mida, mofo)\n");
+    printf("=== DIAGN√ìSTICO DE VAZAMENTOS ===\n");
+    printf("Para come√ßar, qual o tipo de sinal voc√™ percebeu?\n\n");
+    printf("1 - Vazamento VIS√çVEL (√Ågua jorrando, pingando, cano estourado)\n");
+    printf("2 - Vazamento OCULTO (Conta alta, parede √∫mida, mofo)\n");
     printf("Escolha (1 ou 2): ");
     scanf("%d", &tipo_vazamento);
 
-    // --- RAMO 1: VAZAMENTO VISÕVEL ---
+    // --- RAMO 1: VAZAMENTO VIS√çVEL ---
     if (tipo_vazamento == 1) {
-        printf("\n--- Analisando Vazamento VisÌvel ---\n");
-        printf("O vazamento est· ocorrendo na rua, na calÁada ou no cavalete (relogio)? (s/n): "); //primeiro para saber se o vazamento È na rua pois muitas das vezes a press„o È fraca mas isso È problema da ¡guas de Manaus
+        printf("\n--- Analisando Vazamento Vis√≠vel ---\n");
+        printf("O vazamento est√° ocorrendo na rua, na cal√ßada ou no cavalete (relogio)? (s/n): "); //primeiro para saber se o vazamento √© na rua pois muitas das vezes a press√£o √© fraca mas isso √© problema da √Åguas de Manaus
         scanf(" %c", &resposta);
-        resposta = tolower(resposta); // tolower para detectar caso for utilizado letra mai˙scula N/n - S/s
+        resposta = tolower(resposta); // tolower para detectar caso for utilizado letra mai√∫scula N/n - S/s
 
 
         if (resposta == 's') {
-            // Se est· na rua ou no hidrÙmetro, È problema da concession·ria
-            printf("\n[DIAGN”STICO]: Vazamento no ramal de entrada ou cavalete.\n");
-            printf("[SOLU«√O]: Entre em contato com a AGUAS DE MANAUS para reparo de urgÍncia.\n");
+            // Se est√° na rua ou no hidr√¥metro, √© problema da concession√°ria
+            printf("\n[DIAGN√ìSTICO]: Vazamento no ramal de entrada ou cavalete.\n");
+            printf("[SOLU√á√ÉO]: Entre em contato com a AGUAS DE MANAUS para reparo de urg√™ncia.\n");
+            
         } else {
-            // Se n„o È na rua, È dentro de casa
+            // Se n√£o √© na rua, √© dentro de casa
 
             printf("\n--- Analisando Vazamento Interno ---\n");
-            printf("O vazamento È em uma torneira, chuveiro ou caixa acoplada(caixa da privada)? (s/n): ");
+            printf("O vazamento √© em uma torneira, chuveiro ou caixa acoplada(caixa da privada)? (s/n): ");
             scanf(" %c", &resposta);
             resposta = tolower(resposta);
         }
 
             if (resposta == 's') {
 
-                 printf("\n[DIAGN”STICO]: Desgaste de vedaÁ„o ou reparo.\n");
-                 printf("[SOLU«√O CASO 1]: Verifique a guarniÁ„o(borracha) da torneira, caso seja rosqueado, retire a torneira e aplique veda-rosca na ·rea rosqueada ou chame um ENCANADOR.\n\n");
-                 printf("[SOLU«√O CASO 2]: Verifique a guarniÁ„o(borracha) do chuveiro, caso seja rosqueado, retire o chuveiro e aplique veda-rosca na ·rea rosqueada ou chame um ENCANADOR.\n\n");
-                 printf("[SOLU«√O CASO 3]: Verifique o kit da caixa da privada, caso encontre a peÁa defeituosa, substitua a peÁa, caso n„o encontre, compre o kit completo e substitua ele ou chame um ENCANADOR.\n");
+                 printf("\n[DIAGN√ìSTICO]: Desgaste de veda√ß√£o ou reparo.\n");
+                 printf("[SOLU√á√ÉO CASO 1]: Verifique a guarni√ß√£o(borracha) da torneira, caso seja rosqueado, retire a torneira e aplique veda-rosca na √°rea rosqueada ou chame um ENCANADOR.\n\n");
+                 printf("[SOLU√á√ÉO CASO 2]: Verifique a guarni√ß√£o(borracha) do chuveiro, caso seja rosqueado, retire o chuveiro e aplique veda-rosca na √°rea rosqueada ou chame um ENCANADOR.\n\n");
+                 printf("[SOLU√á√ÉO CASO 3]: Verifique o kit da caixa da privada, caso encontre a pe√ßa defeituosa, substitua a pe√ßa, caso n√£o encontre, compre o kit completo e substitua ele ou chame um ENCANADOR.\n");
 
-                 //A privada geralmente È o maior inimigo do consumo alto, se ele ficar enchendo infinitamente a conta fica altÌssima e quase ninguÈm percebe.
+                 //A privada geralmente √© o maior inimigo do consumo alto, se ele ficar enchendo infinitamente a conta fica alt√≠ssima e quase ningu√©m percebe.
 
             } else {
 
                  printf("\n--- Analisando Vazamento Interno ---\n");
-                 printf("O vazamento È na caixa d'·gua, em algum registro da casa ou cano exposto? (s/n): ");
+                 printf("O vazamento √© na caixa d'√°gua, em algum registro da casa ou cano exposto? (s/n): ");
                  scanf(" %c", &resposta);
                  resposta = tolower(resposta);
 
 
             if (resposta == 's'){
 
-                    printf("\n[DIAGN”STICO]: Desgaste de vedaÁ„o ou reparo.\n");
-                    printf("[SOLU«√O CASO 1]: Verifique se a caixa tem bÛia, caso tenha verifique se n„o est· danificada, caso esteja, troque a bÛia, caso n„o tenha bÛia, verifique se n„o tem um problema na parte exterior da caixa ou chame um ENCANADOR.\n\n");
-                    printf("[SOLU«√O CASO 2]: Verifique se o registro est· danificado, se ele ficar pingando, substitua ele, fique de olho na polegada do registro se ele È de meia(1/2) ou trÍs quartos(3/4), caso n„o esteja danificado e ele possua rosca, aplique veda-rosca ou chame um ENCANADOR.\n\n");
-                    printf("[SOLU«√O CASO 3]: Feche o registro de ·gua e faÁa a mediÁ„o do cano, de quantos metros ir· precisar e qual a polegada do cano (1/2 ou 3/4), em caso de cano de solda(sem rosca) compre cola para cano ou chame um ENCANADOR.\n\n");
+                printf("\n[DIAGN√ìSTICO]: Desgaste de veda√ß√£o ou reparo.\n");
+                printf("[SOLU√á√ÉO CASO 1]: Verifique se a caixa tem b√≥ia, caso tenha verifique se n√£o est√° danificada, caso esteja, troque a b√≥ia, caso n√£o tenha b√≥ia, verifique se n√£o tem um problema na parte exterior da caixa ou chame um ENCANADOR.\n\n");
+                printf("[SOLU√á√ÉO CASO 2]: Verifique se o registro est√° danificado, se ele ficar pingando, substitua ele, fique de olho na polegada do registro se ele √© de meia(1/2) ou tr√™s quartos(3/4), caso n√£o esteja danificado e ele possua rosca, aplique veda-rosca ou chame um ENCANADOR.\n\n");
+                printf("[SOLU√á√ÉO CASO 3]: Feche o registro de √°gua e fa√ßa a medi√ß√£o do cano, de quantos metros ir√° precisar e qual a polegada do cano (1/2 ou 3/4), em caso de cano de solda(sem rosca) compre cola para cano ou chame um ENCANADOR.\n\n");
 
             }else{
 
-                printf("\n[DIAGN”STICO]: PossÌvel vazamento interno.\n");
-                printf("[SOLU«√O]: RefaÁa o diagnÛstico e escolha a opÁ„o 2, obrigado :)");
+                printf("\n[DIAGN√ìSTICO]: Poss√≠vel vazamento interno.\n");
+                printf("[SOLU√á√ÉO]: Refa√ßa o diagn√≥stico e escolha a op√ß√£o 2, obrigado :)");
 
             }
         }
@@ -71,31 +72,31 @@ int main() {
     // --- RAMO 2: VAZAMENTO OCULTO ---
     else if (tipo_vazamento == 2) {
         printf("\n--- Analisando Vazamento Oculto ---\n");
-        printf("Vamos fazer o 'Teste do RelÛgio'.\n");
-        printf("1. Feche todas as torneiras e n„o use o banheiro.\n");
-        printf("2. Olhe para o hidrÙmetro (relÛgio).\n");
-        printf("PERGUNTA: O ponteiro ou a 'borboleta' do relÛgio continua girando? (s/n): ");
+        printf("Vamos fazer o 'Teste do Rel√≥gio'.\n");
+        printf("1. Feche todas as torneiras e n√£o use o banheiro.\n");
+        printf("2. Olhe para o hidr√¥metro (rel√≥gio).\n");
+        printf("PERGUNTA: O ponteiro ou a 'borboleta' do rel√≥gio continua girando? (s/n): ");
         scanf(" %c", &resposta);
         resposta = tolower(resposta);
 
         if (resposta == 's') {
-            // Se gira com tudo fechado, a ·gua est· saindo em algum lugar dentro da casa
-            printf("\n[DIAGNOSTICO]: Vazamento oculto na tubulaÁ„o interna.\n");
-            printf("[SOLU«√O]: Chame um BOMBEIRO HIDRAULICO que tenha aparelho de 'CaÁa-Vazamentos'.\n");
+            // Se gira com tudo fechado, a √°gua est√° saindo em algum lugar dentro da casa
+            printf("\n[DIAGNOSTICO]: Vazamento oculto na tubula√ß√£o interna.\n");
+            printf("[SOLU√á√ÉO]: Chame um BOMBEIRO HIDRAULICO que tenha aparelho de 'Ca√ßa-Vazamentos'.\n");
 
-            //obs: bombeiro hidr·ulico e encanador s„o termos semelhantes, a unica diferenÁa È que bombeiro hidr·ulico trabalha com problemas mais complexos;
-            //exemplo: detectar vazamentos invisÌveis, no caso da ¡guas de Manaus ele trabalha fazendo manobra(fechando registros) em bairros para fazer manutenÁ„o nas redes de ·guas.
+            //obs: bombeiro hidr√°ulico e encanador s√£o termos semelhantes, a unica diferen√ßa √© que bombeiro hidr√°ulico trabalha com problemas mais complexos;
+            //exemplo: detectar vazamentos invis√≠veis, no caso da √Åguas de Manaus ele trabalha fazendo manobra(fechando registros) em bairros para fazer manuten√ß√£o nas redes de √°guas.
 
         } else {
-            // Se n„o gira, n„o h· vazamento interno consumindo ·gua agora
-            printf("\n[DIAGN”STICO]: N„o h· indÌcios de vazamento interno contÌnuo.\n");
-            printf("O problema pode ser erro de leitura ou vazamento 'antes' do relÛgio.\n");
-            printf("[SOLU«√O]: Entre em contato com a ¡GUAS DE MANAUS para contestar a fatura ou pedir vistoria.\n");
+            // Se n√£o gira, n√£o h√° vazamento interno consumindo √°gua agora
+            printf("\n[DIAGN√ìSTICO]: N√£o h√° ind√≠cios de vazamento interno cont√≠nuo.\n");
+            printf("O problema pode ser erro de leitura ou vazamento 'antes' do rel√≥gio.\n");
+            printf("[SOLU√á√ÉO]: Entre em contato com a √ÅGUAS DE MANAUS para contestar a fatura ou pedir vistoria.\n");
         }
     }
 
     else {
-        printf("\nOpÁ„o inv·lida. Reinicie o programa.\n");
+        printf("\nOp√ß√£o inv√°lida. Reinicie o programa.\n");
     }
 
     return 0;
